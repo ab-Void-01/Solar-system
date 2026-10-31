@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An animated model of the solar system built with vanilla HTML, CSS and JavaScript.">
+  <title>Solar System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <main class="system" id="system" aria-label="Animated model of the solar system">
+    <div class="belt" id="belt" aria-hidden="true"></div>
+
+    <button class="body sun" id="sun" type="button" aria-label="Sun"><span class="label" aria-hidden="true">Sun</span></button>
+
+    <button class="body planet" id="mercury" type="button" aria-label="Mercury"><span class="label" aria-hidden="true">Mercury</span></button>
+    <button class="body planet" id="venus"   type="button" aria-label="Venus"><span class="label" aria-hidden="true">Venus</span></button>
+    <button class="body planet" id="earth"   type="button" aria-label="Earth"><span class="label" aria-hidden="true">Earth</span></button>
+    <button class="body planet" id="mars"    type="button" aria-label="Mars"><span class="label" aria-hidden="true">Mars</span></button>
+    <button class="body planet" id="jupiter" type="button" aria-label="Jupiter"><span class="label" aria-hidden="true">Jupiter</span></button>
+    <button class="body planet" id="saturn"  type="button" aria-label="Saturn"><span class="label" aria-hidden="true">Saturn</span></button>
+    <button class="body planet" id="uranus"  type="button" aria-label="Uranus"><span class="label" aria-hidden="true">Uranus</span></button>
+    <button class="body planet" id="neptune" type="button" aria-label="Neptune"><span class="label" aria-hidden="true">Neptune</span></button>
+
+    <div class="body moon" id="moon" aria-hidden="true"></div>
+  </main>
+
+  <aside class="info" id="info" aria-live="polite">
+    <h1>Solar system</h1>
+    <p class="hint">Select a planet to see its details. Sizes and distances are compressed so everything fits on screen.</p>
+  </aside>
+
+  <div class="controls" role="group" aria-label="Simulation controls">
+    <button type="button" id="toggle-play" class="btn">Pause</button>
+    <label class="speed">
+      Speed
+      <input type="range" id="speed" min="0" max="5" step="0.25" value="1">
+      <output id="speed-out" for="speed">1×</output>
+    </label>
+    <label class="check"><input type="checkbox" id="toggle-labels" checked> Labels</label>
+    <label class="check"><input type="checkbox" id="toggle-orbits" checked> Orbits</label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
